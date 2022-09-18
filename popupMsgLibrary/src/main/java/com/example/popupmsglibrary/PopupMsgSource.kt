@@ -282,6 +282,18 @@ class PopupMsgSource {
                 }
             }
 
+            tvTopMsg.updateLayoutParams<ConstraintLayout.LayoutParams> {
+                bottomToTop = imageView.id
+                endToEnd = imageView.id
+                startToStart = imageView.id
+            }
+
+            tvBottomMsg.updateLayoutParams<ConstraintLayout.LayoutParams> {
+                topToBottom = imageView.id
+                endToEnd = imageView.id
+                startToStart = imageView.id
+            }
+
         } else if (type == PopupMsg.TYPE_GIF && gifImgResource != null){
             imGif.isVisible = true
             imGif.setImageResource(gifImgResource)
@@ -299,6 +311,18 @@ class PopupMsgSource {
                     this.width = imgWidth
                     this.height = imgHeight
                 }
+            }
+
+            tvTopMsg.updateLayoutParams<ConstraintLayout.LayoutParams> {
+                bottomToTop = imGif.id
+                endToEnd = imGif.id
+                startToStart = imGif.id
+            }
+
+            tvBottomMsg.updateLayoutParams<ConstraintLayout.LayoutParams> {
+                topToBottom = imGif.id
+                endToEnd = imGif.id
+                startToStart = imGif.id
             }
         }
 

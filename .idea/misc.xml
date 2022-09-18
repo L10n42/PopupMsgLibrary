@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/PopupMsg/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.196" />
         <entry key="..\:/PopupMsg/popupMsgLibrary/src/main/res/layout/custom_image_view.xml" value="0.36666666666666664" />
         <entry key="..\:/PopupMsg/popupMsgLibrary/src/main/res/layout/custom_msg_view.xml" value="0.365625" />
       </map>

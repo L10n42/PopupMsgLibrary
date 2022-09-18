@@ -348,7 +348,7 @@ class PopupMsgSource {
     private fun createStrokeDrawable(width: Int, color: Int, radius: Float): Drawable {
         val shape = GradientDrawable()
         shape.shape = GradientDrawable.RECTANGLE
-        shape.cornerRadius = radius
+        shape.cornerRadius = radius - 3
         shape.setStroke(width, color)
 
         return shape

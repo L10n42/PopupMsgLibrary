@@ -21,6 +21,54 @@ dependencies {
   implementation 'com.github.L10n42:PopupMsgLibrary:0.4.0'
 }
 ```
+## Using ##
+Class PopupMsg has two Builders. TextBuilder to show only text msg and ImgBuilder to show Image and Gif (it also can include text msg Top or Bottom of image). So you need choose Builder,  put mandatory parameters and, if you need, set some additional functions (full list of the additional functions is below) and also is very important to call method `show()` at the end.
+
+1. **Example using of TextBuilder:**
+```
+PopupMsg.TextBuilder(this, "Hello world!")
+  .setDuration(3000)
+  .setTextSize(20f)
+  .setStroke(4, Color.parseColor("#8F58E6"))
+  .setTextColor(Color.parseColor("#8F58E6"))
+  .setBackgroundColor(Color.parseColor("#F09318"))
+  .show()
+```
+
+2. **Example using of ImgBuilder (Type: drawable):**
+```
+PopupMsg.ImgBuilder(this)
+  .setType(PopupMsg.TYPE_DRAWABLE)
+  .setDuration(PopupMsg.DURATION_LONG)
+  .setBackgroundColor(Color.parseColor("#E63E30"))
+  .setDrawable(getDrawable(R.drawable.android_logo)!!)
+  .setImgSize(300, 300)
+  .setGravity(Gravity.CENTER, 0, 0)
+  .setTopMsg("it's android!")
+  .setTextResourceColor(R.color.teal_200)
+  .setTextSize(20f)
+  .show()
+```
+
+3. **Example using of ImgBuilder (Type: gif):**
+```
+PopupMsg.ImgBuilder(this)
+  .setType(PopupMsg.TYPE_GIF)
+  .setDuration(5000)
+  .setBackgroundColor(Color.RED)
+  .setGifImgResource(R.drawable.my_test_gif)
+  .setTopMsg("I'm a banana!")
+  .setCornerRadius(10f)
+  .setStroke(3, resources.getColor(R.color.green))
+  .setGravity(Gravity.CENTER, 0, 0)
+  .setTextResourceColor(R.color.purple_500)
+  .setTextSize(20f)
+  .setImgSize(350, 350)
+  .show()
+```
+## Examples demo: ##
+https://user-images.githubusercontent.com/108233306/191006788-426248f5-1e5a-461c-9c6d-75ba9ac9c80c.mp4
+
 ## Builder additional functions
 **Functions for both Builder:**
 - `setCornerRadius()` - is used to set corner radius for pop up window. As a parameter you must put some `Float` value, by the default it is: 33f 
@@ -95,7 +143,3 @@ Example: `setImgSize(100, 100)`
 
 - `set(bottom/ top)Msg` - is used to set text msg bottom or top of drawable. As a parameter you need put some `String` msg.
 Example: `setBottomMsg("Hello world!")`
-
-
-
-

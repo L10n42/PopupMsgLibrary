@@ -21,8 +21,8 @@ dependencies {
   implementation 'com.github.L10n42:PopupMsgLibrary:0.4.0'
 }
 ```
-## Builder metods
-**Metods for both builder:**
+## Builder functions
+**Functions for both Builder:**
 - `setCornerRadius()` - is used to set corner radius for pop up window. As a parameter you must put some `Float` value, by the default it is: 33f 
 Example: `setCornerRadius(50f)`
 
@@ -64,6 +64,7 @@ Example: `setTextAlignment(View.TEXT_ALIGNMENT_VIEW_START)`
 - `setStroke()` - is used to set a stroke for your pop-up window. As a first parameter you must put `Int` width of stroke, as second you must put `Int` color of stoke.
 Example: `setStroke(4, Color.RED)`
 
+**Functions for TextBuilder**
 - `
 
 

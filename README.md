@@ -21,7 +21,7 @@ dependencies {
   implementation 'com.github.L10n42:PopupMsgLibrary:0.4.0'
 }
 ```
-## Builder functions
+## Builder additional functions
 **Functions for both Builder:**
 - `setCornerRadius()` - is used to set corner radius for pop up window. As a parameter you must put some `Float` value, by the default it is: 33f 
 Example: `setCornerRadius(50f)`
@@ -64,7 +64,38 @@ Example: `setTextAlignment(View.TEXT_ALIGNMENT_VIEW_START)`
 - `setStroke()` - is used to set a stroke for your pop-up window. As a first parameter you must put `Int` width of stroke, as second you must put `Int` color of stoke.
 Example: `setStroke(4, Color.RED)`
 
-**Functions for TextBuilder**
-- `
+**Functions for TextBuilder:**
+- `setDrawable(left/ right/ top/ bottom)()` - is used to set a drawable (left/ right/ top/ bottom) of text. As a parameter you must put some drawable.
+Example: `setDrawableLeft(yourDrawable1)` , `setDrawableTop(yourDrawable2)`
+
+- `setDrawable(left/ right/ top/ bottom)Resource()` - is used to set a drawable by the id (left/ right/ top/ bottom) of text. As a parameter you must put id of your drawable.
+Example: `setDrawableLeftResource(R.drawable.yourDrawable1)` , `setDrawableTopResource(R.drawable.yourDrawable2)`
+
+- `setDrawable(left/ right/ top/ bottom)Size()` - is used to set drawable (left/ right/ top/ bottom) size. As a first parameter you must put `Int` width of drawable, as second you must put `Int` height of drawable.
+Example: `setDrawableLeftSize(100, 100)` , `setDrawableBottomSize(230, 125)`
+
+- `setTextPadding()` - is used to set padding for text. As parameters you must put 4 `Int` value (left, right, top, bottom).
+Example: `setTextPadding(10, 10, 20, 20)`
+
+**Functions for ImgBuilder:**
+- `setType()` - is used when you need set type of msg (image or gif). As a parameter you need put one of the constants `TYPE_DRAWABLE` or `TYPE_GIF`, by the default it is: `TYPE_DRAWABLE`
+Example: `setType(PopupMsg.TYPE_DRAWABLE)` or `setType(PopupMsg.TYPE_GIF)`
+
+- `setGifImgResource()` - is used to set gif image resource when you choose type Gif. As a parameter you must put id of your Gif image.
+Example: `setGifImgResource(R.drawable.yourGif)`
+
+- `setDrawable()` - is used to set drawable when you choose type Drawable. As a parameter you must put some drawable.
+Example: `setDrawable(yourDrawable)`
+
+- `setImgPadding()` - is used to set padding for drawable(/gif). As parameters you must put 4 `Int` value (left, right, top, bottom).
+Example: `setImgPadding(15, 15, 30, 30)`
+
+- `setImgSize()` - is used to set drawable(/gif) size. As a first parameter you must put `Int` width of drawable, as second you must put `Int` height of drawable.
+Example: `setImgSize(100, 100)`
+
+- `set(bottom/ top)Msg` - is used to set text msg bottom or top of drawable. As a parameter you need put some `String` msg.
+Example: `setBottomMsg("Hello world!")`
+
+
 
 
